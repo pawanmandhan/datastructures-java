@@ -36,5 +36,15 @@ public class LinkedList {
 		this.tail = newNode;
 		this.size++;
 	}
+	
+	public void addFirst(int item) {
+		// create a new node
+		Node newNode = new Node(item, null);
+		if (this.size == 0) this.tail = newNode;
+		else newNode.next = this.head;
+
+		this.head = newNode;
+		this.size++;
+	}
 
 }

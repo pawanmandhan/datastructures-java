@@ -4,11 +4,11 @@ public class LinkedListClient {
 	
 	public static void main(String[] args) {
 		LinkedList list = new LinkedList();
-		list.addLast(10);
+		list.addFirst(10);
 		list.addLast(20);
 		list.addLast(30);
-		list.addLast(40);
-		list.addLast(50);
+		list.addFirst(40);
+		list.addFirst(50);
 		list.display();
 	}
 
