@@ -30,21 +30,37 @@ public class LinkedList {
 	public void addLast(int item) {
 		// create a new node
 		Node newNode = new Node(item, null);
-		if (this.size == 0) this.head = newNode;
-		else this.tail.next = newNode;
+		if (this.size == 0)
+			this.head = newNode;
+		else
+			this.tail.next = newNode;
 
 		this.tail = newNode;
 		this.size++;
 	}
-	
+
 	public void addFirst(int item) {
 		// create a new node
 		Node newNode = new Node(item, null);
-		if (this.size == 0) this.tail = newNode;
-		else newNode.next = this.head;
+		if (this.size == 0)
+			this.tail = newNode;
+		else
+			newNode.next = this.head;
 
 		this.head = newNode;
 		this.size++;
+	}
+
+	public int getFirst() {
+		if (size == 0)
+			throw new RuntimeException("LL is empty");
+		return this.head.data;
+	}
+
+	public int getLast() {
+		if (size == 0)
+			throw new RuntimeException("LL is empty");
+		return this.tail.data;
 	}
 
 }
